@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PetHome_Admin/PetHome_Admin.iml" filepath="$PROJECT_DIR$/PetHome_Admin/PetHome_Admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pethome_front/Pethome_front.iml" filepath="$PROJECT_DIR$/Pethome_front/Pethome_front.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pethome_web_parent.iml" filepath="$PROJECT_DIR$/Pethome_web_parent.iml" />
+    </modules>
+  </component>
+</project>
