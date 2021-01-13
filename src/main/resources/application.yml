@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///pethome
+    username: root
+    password: 123456
+
+mybatis:
+  type-aliases-package: cn.itsource.org.domain
+  mapper-locations: cn/itsource/org/mapper/*Mapper.xml
+
+server:
+  port: 80
+
+logging:
+  level:
+    cn:
+     itsource: trace
+

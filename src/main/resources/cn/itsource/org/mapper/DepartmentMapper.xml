@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.org.mapper.DepartmentMapper">
+    <!--查找子部门-->
+    <!--List<Department> findChildByParentId(Long id);-->
+    <select id="findChildByParentId" resultType="cn.itsource.org.domain.Department">
+        SELECT * FROM t_department WHERE parent_id=#{id}
+    </select>
+
+    <!--一二级目录的map-->
+    <resultMap id="OneTwolevelMap" type="cn.itsource.org.domain.Department">
+        <id property="id" column="id" />
+        <result property="name" column="name"/>
+        <collection property="children"   ofType="cn.itsource.org.domain.Department">
+            <id property="id" column="dep2id" />
+            <result property="name" column="dep2name"/>
+        </collection>
+    </resultMap>
+    <!--//查找一二级目录-->
+    <!--List<Department> findOneTwolevelDepartments();-->
+    <select id="findOneTwolevelDepartments" resultMap="OneTwolevelMap">
+        SELECT dep.*,dep2.id dep2id,dep2.name dep2name FROM t_department dep
+        LEFT JOIN t_department dep2 ON dep.id = dep2.parent_id
+        WHERE dep.parent_id is NULL
+    </select>
+    
+
+    <!--//批量删除-->
+    <!--void deleteMany(List<Department> department);-->
+    <delete id="deleteMany" >
+        DELETE FROM t_department WHERE id in
+        <foreach collection="list" item="dep" open="(" separator="," close=")">
+           #{dep.id}
+        </foreach>
+    </delete>
+
+
+    <!--//查所有的条数-->
+    <!--Long count(DepQuery depQuery);-->
+    <select id="count" resultType="long">
+        SELECT count(*) FROM t_department
+        <where>
+            <if test="name!=null and name!=''" >
+                and `name` LIKE concat("%",#{name},"%")
+            </if>
+            <if test="state!=null" >
+                and state = #{state}
+            </if>
+        </where>
+    </select>
+
+    <resultMap id="depResultMap" type="cn.itsource.org.domain.Department">
+        <id property="id" column="id" />
+        <result property="sn" column="sn"/>
+        <result property="name" column="name"/>
+        <result property="dirPath" column="dirPath"/>
+        <result property="state" column="state"/>
+        <association property="manager" javaType="cn.itsource.org.domain.Employee">
+            <id property="id" column="eid" />
+            <result property="username" column="eusername"/>
+        </association>
+        <association property="dept_parent" javaType="cn.itsource.org.domain.Department">
+            <id property="id" column="did"/>
+            <result property="name" column="dept_parent"/>
+        </association>
+    </resultMap>
+    <!--//分页 高级查询-->
+    <!--List<Department> findPage(DepQuery depQuery);-->
+    <select id="findPage" resultMap="depResultMap">
+        SELECT dep.*,emp.id eid,emp.username eusername,dep2.id did,dep2.name dept_parent FROM t_department dep
+        LEFT JOIN t_employee emp ON dep.manager_id=emp.id
+        LEFT JOIN t_department dep2 ON dep.parent_id=dep2.id
+        <where>
+            <if test="name!=null and name!=''" >
+                and dep.name LIKE concat("%",#{name},"%")
+            </if>
+            <if test="state!=null" >
+                and dep.state = #{state}
+            </if>
+        </where>
+        limit #{begin},#{pageSize}
+    </select>
+    <resultMap id="resultDep" type="cn.itsource.org.domain.Department">
+        <id property="id" column="id"/>
+        <result property="sn" column="sn"/>
+    </resultMap>
+
+    <!--void add(Department department);-->
+    <insert id="add">
+        INSERT INTO t_department(sn, name,dirPath,state,manager_id,parent_id)
+        VALUES (#{sn},#{name},#{dirPath},#{state},#{manager.id},#{dept_parent.id})
+
+    </insert>
+    <!--void update(Department department);-->
+    <update id="update">
+        UPDATE t_department SET sn=#{sn},name=#{name},dirPath=#{dirPath},
+        state=#{state},manager_id=#{manager.id},parent_id=#{dept_parent.id}
+        WHERE id=#{id}
+    </update>
+    <!--void delete(Long id);-->
+    <delete id="delete">
+        DELETE FROM t_department WHERE id=#{id}
+    </delete>
+    <!--Department findById(Long id);-->
+    <select id="findById" resultType="cn.itsource.org.domain.Department">
+        SELECT * FROM t_department WHERE id=#{id}
+    </select>
+    <!--List<Department> findAll();-->
+    <select id="findAll" resultType="cn.itsource.org.domain.Department">
+        SELECT * FROM t_department
+    </select>
+
+</mapper>
