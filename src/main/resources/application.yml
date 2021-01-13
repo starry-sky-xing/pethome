@@ -10,7 +10,7 @@ mybatis:
   mapper-locations: cn/itsource/org/mapper/*Mapper.xml
 
 server:
-  port: 80
+  port: 8081
 
 logging:
   level:
