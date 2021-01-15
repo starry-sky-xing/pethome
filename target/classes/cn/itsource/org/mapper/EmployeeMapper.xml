@@ -3,6 +3,23 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.itsource.org.mapper.EmployeeMapper">
+    <!--//添加-->
+    <!--void add(T t);-->
+    <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_employee (username, email, phone, salt, password, age, state, department_id, shop_id) VALUES (
+        #{username},
+        #{email},
+        #{phone},
+        #{salt},
+        #{password},
+        #{age},
+        #{state},
+        #{department.id},
+        #{shop.id}
+        )
+    </insert>
+
+
     <!--//查询全部经理-->
     <!--List<Employee> findAll();-->
     <select id="findAll" resultType="cn.itsource.org.domain.Employee">

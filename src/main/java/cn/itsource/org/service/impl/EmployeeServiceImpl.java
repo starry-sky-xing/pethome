@@ -10,11 +10,5 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class EmployeeServiceImpl extends BaseServiceImpl<Employee> implements IEmployeeService {
-//    @Autowired
-//    private EmployeeMapper employeeMapper;
-//
-//    @Override
-//    public List<Employee> loadEmpAll() {
-//        return employeeMapper.loadAll();
-//    }
+
 }

@@ -108,5 +108,7 @@
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.9.2" level="project" />
     <orderEntry type="library" name="Maven: com.thetransactioncompany:cors-filter:2.9" level="project" />
     <orderEntry type="library" name="Maven: com.thetransactioncompany:java-property-utils:1.13" level="project" />
+    <orderEntry type="library" name="Maven: cn.bestwu:fastdfs-client-java:1.27" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
   </component>
 </module>

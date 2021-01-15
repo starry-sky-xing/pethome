@@ -13,5 +13,7 @@ public class Employee extends BaseDomain{
     private String password;
     private Integer age;
     private Integer state;
+    private Department department;
+    private Shop shop;
 
 }
