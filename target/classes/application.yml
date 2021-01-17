@@ -6,8 +6,7 @@ spring:
     password: 123456
 
 mybatis:
-  type-aliases-package: cn.itsource.org.domain
-  mapper-locations: cn/itsource/org/mapper/*Mapper.xml
+  mapper-locations: cn/itsource/*/mapper/*Mapper.xml
 
 server:
   port: 80

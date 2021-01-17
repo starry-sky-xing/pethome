@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("cn.itsource.org.mapper")
+@MapperScan("cn.itsource.*.mapper")
 public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class,args);

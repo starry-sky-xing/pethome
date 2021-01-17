@@ -1,3 +1,5 @@
+package cn.itsource.fastdfs;
+
 import org.csource.common.MyException;
 import org.csource.fastdfs.*;
 import sun.applet.Main;

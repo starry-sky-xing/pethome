@@ -1,13 +1,13 @@
 package cn.itsource.org.service;
 
-import cn.itsource.org.BeasTest;
+import cn.itsource.BaseTest;
 import cn.itsource.org.domain.Department;
 import cn.itsource.org.query.DepQuery;
 import cn.itsource.basic.utiles.PageBean;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class IDepartmentServiceTest extends BeasTest{
+public class IDepartmentServiceTest extends BaseTest {
 
     @Autowired
     private IDepartmentService departmentService;
