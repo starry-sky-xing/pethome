@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.user.mapper.LoginInfoMapper">
+    <!--//根据用户名/电话/邮箱  类型 查找登录对象-->
+    <!--LoginInfo findByUsernameAndType(@Param("username") String username,@Param("type") Integer type);-->
+    <select id="findByUsernameAndType" resultType="cn.itsource.user.domain.LoginInfo">
+        select * from t_logininfo WHERE (username=#{username} OR phone=#{username} OR email=#{username})
+        and type=#{type}
+    </select>
+
+
+
+    <!--添加-->
+    <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+       INSERT INTO t_logininfo(username, phone, email, salt, password, type, disable) VALUES (
+           #{username},
+           #{phone},
+           #{email},
+           #{salt},
+           #{password},
+           #{type},
+           #{disable}
+       )
+    </insert>
+
+</mapper>

@@ -52,9 +52,9 @@ public class VerifyCodeServiceImpl implements IVerifyCodeService {
                 value+":"+System.currentTimeMillis(),5, TimeUnit.MINUTES);
         //发送手机验证码
         String context = "尊敬的用户，您的验证码为:" + value + ",请您在5分钟以内完成注册!!";
+        System.out.println(context);
         //发送短信
         //SendMsgVerifyCodeUtil.send(phone, context);
-        System.out.println(context);
 
     }
 }

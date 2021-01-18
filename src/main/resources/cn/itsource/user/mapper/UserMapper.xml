@@ -3,6 +3,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.itsource.user.mapper.UserMapper">
+
+    <!--添加-->
+    <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_user (username, email, phone, salt, password, state, age, createtime, headImg, logininfo_id)
+        VALUES (
+        #{username},
+        #{email},
+        #{phone},
+        #{salt},
+        #{password},
+        #{state},
+        #{age},
+        #{createtime},
+        #{headImg},
+        #{loginInfo.id}
+        )
+
+    </insert>
+
+
     <!--更具电话查找用户-->
     <!--User findByPhone(String phone);-->
     <select id="findByPhone" resultType="cn.itsource.user.domain.User">
