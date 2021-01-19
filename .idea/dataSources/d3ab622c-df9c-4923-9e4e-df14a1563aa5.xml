@@ -2614,7 +2614,6 @@ permission_id</ColNames>
     <column id="546" parent="241" name="admin_id">
       <Position>8</Position>
       <DataType>bigint(20)|0</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="547" parent="241" name="PRIMARY">
@@ -2653,6 +2652,7 @@ permission_id</ColNames>
       <RefSchemaName>pethome</RefSchemaName>
       <RefTableName>t_systemdictionarytype</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="554" parent="243" name="id">
       <Position>1</Position>
@@ -2865,17 +2865,12 @@ permission_id</ColNames>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="592" parent="246" name="unionid">
+    <column id="592" parent="246" name="logininfo_id">
       <Position>7</Position>
-      <DataType>varchar(255)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="593" parent="246" name="user_id">
-      <Position>8</Position>
       <DataType>bigint(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="594" parent="246" name="PRIMARY">
+    <key id="593" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

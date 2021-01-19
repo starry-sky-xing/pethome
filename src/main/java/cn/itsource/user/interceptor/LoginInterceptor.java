@@ -20,6 +20,7 @@ public class LoginInterceptor implements HandlerInterceptor{
     private RedisTemplate redisTemplate;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
+
         //获取头信息
         String token = request.getHeader("token");
         //token位空证明没有登录
