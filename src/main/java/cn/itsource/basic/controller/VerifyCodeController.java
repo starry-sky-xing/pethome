@@ -35,4 +35,23 @@ public class VerifyCodeController {
             return JsonResult.me(e.getMessage());
         }
     }
+
+    /**
+     * 绑定微信和手机号的验证码
+     * @param user
+     * @return
+     */
+    @PostMapping("/sendBinderMobileCode")
+    public JsonResult sendBinderVerifyCodeController(@RequestBody User user){
+
+        try {
+            iVerifyCodeService.sendBinderVerifyCodeController(user.getPhone());
+            return new JsonResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return JsonResult.me(e.getMessage());
+        }
+    }
+
+
 }

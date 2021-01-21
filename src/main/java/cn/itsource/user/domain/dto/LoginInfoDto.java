@@ -19,4 +19,7 @@ public class LoginInfoDto {
     private String passwordRepeat;
     //类型
     private Integer type;
+
+    //微信用户的openid
+    private String openid;
 }

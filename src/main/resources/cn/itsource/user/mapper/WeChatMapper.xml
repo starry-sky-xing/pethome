@@ -2,9 +2,38 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="cn.itsource.user.mapper.UserMapper">
+<mapper namespace="cn.itsource.user.mapper.WeChatMapper">
+    <!--//绑定微信用户-->
+    <!--void binder(Long id, String openid);-->
+    <update id="binder" >
+        UPDATE t_wxuser SET logininfo_id=#{loginInfo_id} WHERE openid=#{openid}
+    </update>
+
+
     <!--//更具openid查询用户-->
     <!--Wxuser findByOpenid(String openid);-->
+    <select id="findByOpenid" resultMap="wxResult">
+        SELECT w.*,l.id lid,l.phone lphone,l.email lemail,l.username lusername
+        FROM t_wxuser w
+        LEFT JOIN t_logininfo l ON w.logininfo_id =l.id
+        WHERE w.openid=#{openid}
+    </select>
+
+    <!--查询微信用户的映射-->
+    <resultMap id="wxResult" type="cn.itsource.user.domain.Wxuser">
+        <id column="id" property="id"/>
+        <result column="openid" property="openid"/>
+        <result column="nickname" property="nickname"/>
+        <result column="sex" property="sex"/>
+        <result column="address" property="address"/>
+        <result column="headimgurl" property="headimgurl"/>
+        <association property="loginInfo" javaType="cn.itsource.user.domain.LoginInfo">
+            <id column="lid" property="id"/>
+            <result column="lusername" property="username" />
+            <result column="lphone" property="phone" />
+            <result column="lemail" property="email" />
+        </association>
+    </resultMap>
 
     <!--添加-->
     <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
@@ -16,9 +45,7 @@
         #{headimgurl},
         #{loginInfo.id}
       )
-
     </insert>
-
 
 
 </mapper>

@@ -12,4 +12,5 @@ public interface IVerifyCodeService {
     void sendVerifyCodeController(String phone) throws CustomException;
 
 
+    void sendBinderVerifyCodeController(String phone) throws CustomException;
 }

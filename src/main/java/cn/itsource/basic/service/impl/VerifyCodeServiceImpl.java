@@ -30,10 +30,27 @@ public class VerifyCodeServiceImpl implements IVerifyCodeService {
 
     @Override
     public void sendVerifyCodeController(String phone) throws CustomException {
+        sendCode(phone +":"+ VarifyCodeConstant.USER_RES);
+    }
+
+    /**
+     * 绑定微信的验证码
+     * @param phone 电话号码
+     * @throws CustomException
+     */
+    @Override
+    public void sendBinderVerifyCodeController(String phone) throws CustomException {
+        sendCode(phone +":"+ VarifyCodeConstant.WECHAT_BINDER);
+    }
+
+    /**
+     * 发送验证码
+     */
+    public void sendCode(String key) throws CustomException {
         //产生6位随机数字验证码
         String value = StrUtils.getRandomString(6);
         //从redis取出验证吗 v=value:时间戳
-        String valueCode =(String) redisTemplate.opsForValue().get(phone +":"+ VarifyCodeConstant.USER_RES);
+        String valueCode =(String) redisTemplate.opsForValue().get(key);
         //如果没有超过5分钟 发送上次一样的验证码
         if(!StringUtils.isEmpty(valueCode)){
             //获取存的时候的时间戳
@@ -48,13 +65,13 @@ public class VerifyCodeServiceImpl implements IVerifyCodeService {
 
         //将验证码存入redis
         //k=phone:userres v=value:时间戳  有效期5分钟
-        redisTemplate.opsForValue().set(phone +":"+ VarifyCodeConstant.USER_RES,
+        redisTemplate.opsForValue().set(key,
                 value+":"+System.currentTimeMillis(),5, TimeUnit.MINUTES);
         //发送手机验证码
         String context = "尊敬的用户，您的验证码为:" + value + ",请您在5分钟以内完成注册!!";
         System.out.println(context);
         //发送短信
         //SendMsgVerifyCodeUtil.send(phone, context);
-
     }
+
 }

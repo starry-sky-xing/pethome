@@ -20,6 +20,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -67,7 +69,9 @@ public class LoginInfoServiceImpl extends BaseServiceImpl<LoginInfo> implements 
         String token = UUID.randomUUID().toString();
         redisTemplate.opsForValue().set(token,loginInfo,30, TimeUnit.MINUTES);
         //返回
-        return JsonResult.ResultObj(token);
+        Map<String, Object> map = new HashMap<>();
+        map.put("token", token);
+        return JsonResult.ResultObj(map);
     }
 
     /**

@@ -22,7 +22,7 @@ public class HttpClientUtils {
             // 3 通过客户端传入请求就可以发起请求,获取响应对象
             client.executeMethod(getMethod);
             // 4 提取响应json字符串返回
-            String result = new String(getMethod.getResponseBodyAsString().getBytes("utf8"));
+                    String result = new String(getMethod.getResponseBodyAsString().getBytes("ISO-8859-1"),"utf8");
             return result;
         } catch (IOException e) {
             e.printStackTrace();
