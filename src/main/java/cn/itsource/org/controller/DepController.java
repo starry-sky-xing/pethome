@@ -1,5 +1,6 @@
 package cn.itsource.org.controller;
 
+import cn.itsource.basic.domain.BaseDomain;
 import cn.itsource.org.domain.Department;
 import cn.itsource.org.query.DepQuery;
 import cn.itsource.org.service.IDepartmentService;
@@ -42,11 +43,11 @@ public class DepController {
         }
     }
     //批量删除
-    @PostMapping("/batchDelete")
+    @PostMapping("/batchRemove")
     public JsonResult delete(@RequestBody List<Department> department){
         //System.out.println(department);
         try {
-            departmentService.deleteMany(department);
+            departmentService.BatchRemove(department);
             return new JsonResult();
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,9 +70,14 @@ public class DepController {
 
     }
 
+    /**
+     * 多级部门查询
+     * @return
+     */
     @PostMapping("/getDepartments")
-    public List<Department> findPage(){
-            return departmentService.findOneTwolevelDepartments();
+    public List<Department> findPage(@RequestBody BaseDomain baseDomain){
+        System.out.println(baseDomain.getId());
+        return departmentService.findOneTwolevelDepartments(baseDomain.getId());
 
     }
 }

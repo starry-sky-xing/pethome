@@ -24,6 +24,12 @@ public interface IBaseService<T> {
     void delete(Long id);
 
     /**
+     * 批量删除
+     * @param t 要删除的id集合
+     */
+    public void BatchRemove(List<T> t);
+
+    /**
      * 根据id查询
      * @param id
      * @return

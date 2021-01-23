@@ -2,21 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da3aa09-ea34-4951-9dc2-5426cc488a57" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/controller/ProductController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/domain/Product.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/domain/ProductDetail.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/mapper/ProductDetailMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/mapper/ProductMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/query/ProductQuery.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/service/IProductService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/product/service/impl/ProductServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductDetailMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductMapper.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/PetHomeWebMvcConfigurer.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/PetHomeWebMvcConfigurer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/constant/VarifyCodeConstant.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/constant/VarifyCodeConstant.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/VerifyCodeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/VerifyCodeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IVerifyCodeService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IVerifyCodeService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/VerifyCodeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/VerifyCodeServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/HttpClientUtils.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/HttpClientUtils.java" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/mapper/BaseMapper.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/mapper/BaseMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IBaseService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IBaseService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/BaseServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/BaseServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/org/controller/DepController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/org/controller/DepController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/org/mapper/DepartmentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/org/mapper/DepartmentMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/IDepartmentService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/IDepartmentService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/LoginInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/LoginInfoController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/WeChatController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/WeChatController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/LoginInfo.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/LoginInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/dto/LoginInfoDto.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/dto/LoginInfoDto.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/WeChatMapper.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/WeChatMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IWeChatService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IWeChatService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/ILoginInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/ILoginInfoService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IUserService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/LoginInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/LoginInfoServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/WeChatServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/WeChatServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/WeChatMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/WeChatMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cn/itsource/org/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/cn/itsource/org/mapper/DepartmentMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/basic/mapper/BaseMapper.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/basic/mapper/BaseMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/basic/service/IBaseService.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/basic/service/IBaseService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/basic/service/impl/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/basic/service/impl/BaseServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/org/controller/DepController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/org/controller/DepController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/org/mapper/DepartmentMapper.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/org/mapper/DepartmentMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/org/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/org/mapper/DepartmentMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/org/service/IDepartmentService.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/org/service/IDepartmentService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itsource/org/service/impl/DepartmentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/itsource/org/service/impl/DepartmentServiceImpl.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,48 +66,71 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="t_logininfo: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/controller/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2904#2905#0" expanded="true" />
+                <element signature="e#2954#2955#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="102" column="80" lean-forward="true" selection-start-line="102" selection-start-column="80" selection-end-line="102" selection-end-column="80" />
+              <folding>
+                <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#update#2;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+                <marker date="1611415514403" expanded="true" signature="257:319" ph="UPDATE t_product... " />
+                <marker date="1611415514403" expanded="true" signature="1381:1414" ph="DELETE FROM t_product... " />
+                <marker date="1611415514403" expanded="true" signature="1597:1633" ph="DELETE FROM t_product... " />
+                <marker date="1611415514403" expanded="true" signature="2769:2970" ph="SELECT p.*,d... t_product" />
+                <marker date="1611415514403" expanded="true" signature="3327:3466" ph="SELECT * FRO... t_product" />
+                <marker date="1611415514403" expanded="true" signature="3327:3482" ph="SELECT p.*,d... t_product" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>save</find>
-      <find>department</find>
       <find>#{}.</find>
       <find>Map</find>
+      <find>findByOpenid</find>
+      <find>findOneTwolevelDepartments</find>
+      <find>department</find>
     </findStrings>
     <replaceStrings>
       <replace>t</replace>
+      <replace>Product</replace>
+      <replace>product</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -108,34 +151,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/FastDfsController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/EmailTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/itsource/fastdfs/fastDFS_Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/itsource/mail/EmailTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/exception/CustomException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/App.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/StrUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/VerifyCodeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/SendMsg_webchinese.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/SendMsgVerifyCodeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/GlobalCorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/MD5Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/org/domain/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/constant/PetHomeConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/ShopServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/ILoginInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/LoginInfoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/LoginInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/LoginInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/domain/BaseDomain.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/PetHomeWebconfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/interceptor/LoginInfoIntercepter.java" />
@@ -146,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/constant/WeChatConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/Wxuser.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/HttpClientUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/LoginInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IWeChatService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/VerifyCodeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IVerifyCodeService.java" />
@@ -154,11 +172,36 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/VerifyCodeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/PetHomeWebMvcConfigurer.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/dto/LoginInfoDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/LoginInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/WeChatServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/WeChatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/WeChatMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/WeChatMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/ILoginInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/LoginInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/WeChatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/LoginInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/LoginInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/WeChatController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/ProductDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/domain/ProductDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IBaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/BaseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/basic/mapper/BaseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/IDepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/itsource/org/mapper/DepartmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/org/controller/DepController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/org/mapper/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/query/ProductQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/domain/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/mapper/ProductDetailMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/service/IProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/mapper/ProductMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/service/impl/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itsource/product/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductMapper.xml" />
       </list>
     </option>
   </component>
@@ -240,8 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -260,6 +301,70 @@
               <item name="pethome001" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itsource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itsource" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itsource" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itsource" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itsource" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itsource" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pethome001" type="b2602c69:ProjectViewProjectNode" />
@@ -290,11 +395,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -308,8 +415,8 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pethome-web" />
-    <property name="SearchEverywhereHistoryKey" value="depController &#9;null&#9;null&#10;depa&#9;FILE&#9;file://D:/workspace/IDEAWorkspace/pethome_day2/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../teacherCode/pethome0927" />
+    <property name="SearchEverywhereHistoryKey" value="productq&#9;FILE&#9;file://D:/workspace/IDEAWorkspace/pethome001/src/main/java/cn/itsource/product/query/ProductQuery.java&#10;DepartmentMapper.xml&#9;FILE&#9;file://D:/workspace/IDEAWorkspace/pethome001/src/main/resources/cn/itsource/org/mapper/DepartmentMapper.xml&#10;depController &#9;null&#9;null&#10;depa&#9;FILE&#9;file://D:/workspace/IDEAWorkspace/pethome_day2/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
@@ -332,18 +439,18 @@
       <recent name="cn.itsource.org.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\IDEAWorkspace\pethome001\src\main\resources\cn\itsource\product\mapper" />
       <recent name="D:\workspace\IDEAWorkspace\pethome001\src\main\resources\cn\itsource\user\mapper" />
       <recent name="D:\workspace\IDEAWorkspace\pethome001\src\main\java\cn\itsource\basic\utiles" />
       <recent name="D:\workspace\IDEAWorkspace\pethome001\src\main\java\cn\itsource\basic\config" />
       <recent name="D:\workspace\IDEAWorkspace\pethome001\src\main\resources\cn\itsource\org\mapper" />
-      <recent name="D:\workspace\IDEAWorkspace\pethome_day2\src\main\resources\cn\itsource\org\mapper" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.itsource.product.service.impl" />
+      <recent name="cn.itsource.product.service" />
       <recent name="cn.itsource.user.mapper" />
       <recent name="cn.itsource.user.service.impl" />
       <recent name="cn.itsource.user.service" />
-      <recent name="cn.itsource.basic.service.impl" />
-      <recent name="cn.itsource.org.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -604,7 +711,11 @@
       <workItem from="1611072899387" duration="108000" />
       <workItem from="1611104009474" duration="462000" />
       <workItem from="1611123394192" duration="15860000" />
-      <workItem from="1611190830573" duration="154000" />
+      <workItem from="1611190830573" duration="26850000" />
+      <workItem from="1611281112884" duration="6816000" />
+      <workItem from="1611311544522" duration="5233000" />
+      <workItem from="1611383346369" duration="9375000" />
+      <workItem from="1611410521250" duration="3627000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1610507789878</created>
@@ -669,7 +780,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611072964521</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="第三方登录">
+      <created>1611191009026</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611191009026</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -705,7 +823,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195024000" />
+    <option name="totallyTimeSpent" value="246771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,36 +836,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12875536" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15718885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3557126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4605418" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12875536" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14840989" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4640754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3533569" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24839056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15718885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3557126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.614841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46424517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -779,7 +898,7 @@
           </properties>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -788,86 +907,179 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3332">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="700">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="28" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/SendMsgVerifyCodeUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/WeChatMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        <state relative-caret-position="252">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.9.RELEASE/spring-aop-5.0.9.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="171">
+          <caret line="487" column="0" lean-forward="false" selection-start-line="487" selection-start-column="0" selection-end-line="487" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/MD5Utils.java">
+    <entry file="jar://D:/Javasoft/jdk1.8/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="633" column="0" lean-forward="false" selection-start-line="633" selection-start-column="0" selection-end-line="633" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/dto/LoginInfoDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/LoginInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/Wxuser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/ILoginInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/LoginInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/LoginInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/constant/WeChatConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="20" column="132" lean-forward="false" selection-start-line="20" selection-start-column="132" selection-end-line="20" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/WeChatController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/domain/Shop.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IWeChatService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="224">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/domain/Department.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/com/alibaba/fastjson/JSONObject.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="168">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/EmployeeServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="476">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/Intercept.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/domain/BaseDomain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/interceptor/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="834">
+          <caret line="48" column="64" lean-forward="true" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/GlobalCorsConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/PetHomeWebMvcConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        <state relative-caret-position="276">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/FastDfsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/LoginInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="252">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/domain/Employee.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/LoginInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="168">
+          <caret line="8" column="93" lean-forward="false" selection-start-line="8" selection-start-column="86" selection-end-line="8" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.9.RELEASE/spring-core-5.0.9.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/WeChatServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="130" column="57" lean-forward="true" selection-start-line="130" selection-start-column="57" selection-end-line="130" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/WeChatMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -878,304 +1090,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/service/IShopService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/service/IDepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/org/mapper/EmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <marker date="1611024630221" expanded="true" signature="344:673" ph="INSERT INTO t_employee... " />
-            <marker date="1611024630221" expanded="true" signature="826:850" ph="SELECT * FRO... t_employee" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/ShopServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/controller/ShopController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/mapper/BaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/constant/PetHomeConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="112">
+          <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/controller/DepController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1207">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="1120">
+          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/query/DepQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="140">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/LoginInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <marker date="1610980690686" expanded="true" signature="457:578" ph="select * fro... t_logininfo" />
-            <marker date="1610980690686" expanded="true" signature="695:943" ph="INSERT INTO t_logininfo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/constant/WeChatConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="20" column="132" lean-forward="true" selection-start-line="20" selection-start-column="132" selection-end-line="20" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/HttpClientUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="24" column="83" lean-forward="true" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/org/mapper/ShopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1610707465629" expanded="true" signature="339:567" ph="INSERT INTO t_shop... " />
-            <marker date="1610707465629" expanded="true" signature="661:884" ph="UPDATE t_shop... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/JsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/Wxuser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IVerifyCodeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/constant/VarifyCodeConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="59" />
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/config/PetHomeWebMvcConfigurer.java">
+    <entry file="jar://D:/Javasoft/jdk1.8/src.zip!/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="51" />
+        <state relative-caret-position="427">
+          <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/VerifyCodeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/mapper/DepartmentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="39" />
+        <state relative-caret-position="140">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/dto/LoginInfoDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/org/service/impl/DepartmentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/IWeChatService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/org/mapper/DepartmentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/VerifyCodeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1453">
-          <caret line="73" column="53" lean-forward="true" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/LoginInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="33" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="28" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/WeChatMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/user/mapper/WeChatMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+        <state relative-caret-position="308">
+          <caret line="43" column="18" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="43" selection-end-column="18" />
           <folding>
-            <marker date="1611141380419" expanded="true" signature="317:388" ph="UPDATE t_wxuser... " />
-            <marker date="1611141380419" expanded="true" signature="538:721" ph="SELECT * FRO... t_wxuser" />
-            <marker date="1611141380419" expanded="true" signature="1580:1798" ph="INSERT INTO t_wxuser... " />
+            <marker date="1611310823332" expanded="true" signature="428:570" ph="SELECT * FRO... t_department" />
+            <marker date="1611310823332" expanded="true" signature="1170:1410" ph="SELECT dep.*... t_department" />
+            <marker date="1611310823332" expanded="true" signature="3008:3518" ph="SELECT dep.*... t_department" />
+            <marker date="1611310823332" expanded="true" signature="3781:3933" ph="INSERT INTO t_department... " />
+            <marker date="1611310823332" expanded="true" signature="4029:4193" ph="UPDATE t_department... " />
+            <marker date="1611310823332" expanded="true" signature="4274:4313" ph="DELETE FROM t_department... " />
+            <marker date="1611310823332" expanded="true" signature="4451:4492" ph="SELECT * FRO... t_department" />
+            <marker date="1611310823332" expanded="true" signature="4627:4653" ph="SELECT * FRO... t_department" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/WeChatController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/FastDfsApiOpr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="-1372">
+          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/WeChatServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/controller/FastDfsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="145" column="8" lean-forward="false" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="504">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/controller/LoginInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/impl/LoginInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2688">
-          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/service/ILoginInfoService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/domain/ProductDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/user/mapper/LoginInfoMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductDetailMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="273">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <marker date="1611392598320" expanded="true" signature="268:393" ph="UPDATE t_product_detail... " />
+            <marker date="1611392598320" expanded="true" signature="495:641" ph="INSERT INTO t_product_detail... " />
+            <marker date="1611392598320" expanded="true" signature="702:753" ph="DELETE FROM t_product_detail... " />
+            <marker date="1611392598320" expanded="true" signature="818:866" ph="DELETE FROM t_product_detail... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/mapper/ProductDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/service/IProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/service/impl/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="76" column="24" lean-forward="false" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1896#1897#0" expanded="false" />
+            <element signature="e#1942#1943#0" expanded="false" />
+            <element signature="e#2016#2017#0" expanded="false" />
+            <element signature="e#2063#2064#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="64" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/query/ProductQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/utiles/PageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/IBaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/service/impl/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/basic/mapper/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/mapper/ProductMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itsource/product/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2904#2905#0" expanded="true" />
+            <element signature="e#2954#2955#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itsource/product/mapper/ProductMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="102" column="80" lean-forward="true" selection-start-line="102" selection-start-column="80" selection-end-line="102" selection-end-column="80" />
+          <folding>
+            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1611415514403" expanded="true" signature="257:319" ph="UPDATE t_product... " />
+            <marker date="1611415514403" expanded="true" signature="1381:1414" ph="DELETE FROM t_product... " />
+            <marker date="1611415514403" expanded="true" signature="1597:1633" ph="DELETE FROM t_product... " />
+            <marker date="1611415514403" expanded="true" signature="2769:2970" ph="SELECT p.*,d... t_product" />
+            <marker date="1611415514403" expanded="true" signature="3327:3466" ph="SELECT * FRO... t_product" />
+            <marker date="1611415514403" expanded="true" signature="3327:3482" ph="SELECT p.*,d... t_product" />
+          </folding>
         </state>
       </provider>
     </entry>

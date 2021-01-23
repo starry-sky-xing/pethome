@@ -5,6 +5,6 @@ import cn.itsource.basic.service.IBaseService;
 import cn.itsource.user.domain.User;
 
 public interface IUserService extends IBaseService<User>{
-
+    //
     void checkPhone(String phone) throws CustomException;
 }

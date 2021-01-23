@@ -50,6 +50,12 @@ public class LoginInfoServiceImpl extends BaseServiceImpl<LoginInfo> implements 
         userMapper.add(user);
     }
 
+    /**
+     * 这个是用户登录
+     * @param loginInfoDto
+     * @return map 携带token
+     * @throws CustomException
+     */
     @Override
     public JsonResult login(LoginInfoDto loginInfoDto) throws CustomException {
         //登录检验
@@ -146,7 +152,7 @@ public class LoginInfoServiceImpl extends BaseServiceImpl<LoginInfo> implements 
         }
         //验证码不为空
         if(StringUtils.isEmpty(loginInfoDto.getCode())){
-            throw new CustomException("验证码不能位空");
+            throw new CustomException("验证码不能为空");
         }
         //验证码已过期
         String valueCode=(String)redisTemplate.opsForValue().get(loginInfoDto.getPhone()+":"+ VarifyCodeConstant.USER_RES);

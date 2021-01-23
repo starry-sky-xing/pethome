@@ -20,5 +20,4 @@ public class LoginInfo extends BaseDomain {
     //状态 0 禁用   1启用
     private Integer disable=1;
 
-
 }

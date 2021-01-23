@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.product.mapper.ProductMapper">
+
+
+
+    <update id="offsale" >
+        UPDATE t_product SET offsaletime=sysdate(),state=0 WHERE id IN
+        <foreach collection="list" item="p" open="(" close=")" separator="," >
+            #{p.id}
+        </foreach>
+    </update>
+
+
+    <update id="onsale">
+        UPDATE t_product SET onsaletime=sysdate(),state=1 WHERE id IN
+        <foreach collection="list" item="p" open="(" separator="," close=")">
+            #{p.id}
+        </foreach>
+    </update>
+
+    <update id="update">
+        UPDATE t_product SET
+           name=#{name},
+           resources=#{resources},
+           saleprice=#{saleprice},
+           costprice=#{costprice}
+          WHERE id=#{id}
+    </update>
+
+
+    <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_product (name, resources, saleprice, offsaletime, onsaletime, state, costprice, createtime, salecount)
+        VALUES (
+        #{name},
+        #{resources},
+        #{saleprice},
+        #{offsaletime},
+        #{onsaletime},
+        #{state},
+        #{costprice},
+        #{createtime},
+        #{salecount}
+        )
+    </insert>
+
+    <delete id="BatchRemove" >
+        DELETE FROM t_product WHERE id IN
+        <foreach collection="list" item="p" open="(" separator="," close=")" >
+            #{p.id}
+        </foreach>
+    </delete>
+
+    <!--//删除-->
+    <delete id="delete">
+        DELETE FROM t_product WHERE id=#{id}
+    </delete>
+
+
+    <select id="count" resultType="long">
+        SELECT count(*) FROM t_product p
+        <include refid="wheresql"/>
+    </select>
+
+
+    <resultMap id="productmap" type="cn.itsource.product.domain.Product">
+        <id property="id" column="id"/>
+        <result column="name" property="name"/>
+        <result column="resources" property="resources"/>
+        <result column="saleprice" property="saleprice"/>
+        <result column="offsaletime" property="offsaletime"/>
+        <result column="onsaletime" property="onsaletime"/>
+        <result column="state" property="state"/>
+        <result column="costprice" property="costprice"/>
+        <result column="createtime" property="createtime"/>
+        <result column="salecount" property="salecount"/>
+        <association property="productDetail" javaType="cn.itsource.product.domain.ProductDetail">
+            <id column="did" property="id"/>
+            <result column="dintro" property="intro"/>
+            <result column="dorder" property="orderNotice"/>
+        </association>
+    </resultMap>
+    <select id="findPage" resultMap="productmap">
+        SELECT p.*,d.id did,d.intro dintro,d.orderNotice dorder FROM t_product p
+        LEFT JOIN t_product_detail d ON p.id=d.product_id
+        <include refid="wheresql"/>
+        limit #{begin},#{pageSize}
+    </select>
+    <sql id="wheresql">
+        <where>
+            <if test="name!=null and ''!=name">
+                and p.`name` LIKE concat("%",#{name},"%")
+            </if>
+            <if test="state!=null">
+                and p.state=#{state}
+            </if>
+        </where>
+    </sql>
+
+    <select id="findById" resultMap="productmap">
+        SELECT p.*,d.id did,d.intro dintro,d.orderNotice dorder FROM t_product p
+        LEFT JOIN t_product_detail d ON p.id=d.product_id
+        WHERE p.id=#{id}
+    </select>
+</mapper>

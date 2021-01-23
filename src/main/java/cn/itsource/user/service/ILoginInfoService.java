@@ -14,5 +14,11 @@ public interface ILoginInfoService extends IBaseService<LoginInfo> {
      */
     void Register(LoginInfoDto loginInfoDto) throws CustomException;
 
+    /**
+     *
+     * @param loginInfoDto
+     * @return
+     * @throws CustomException
+     */
     JsonResult login(LoginInfoDto loginInfoDto) throws CustomException;
 }

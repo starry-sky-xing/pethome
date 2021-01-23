@@ -39,4 +39,6 @@ public interface BaseMapper<T> {
     Long count(BaseQuery baseQuery);
     //分页 高级查询
     List<T> findPage(BaseQuery baseQuery);
+    //批量删除
+    void BatchRemove(List<T> t);
 }

@@ -4,9 +4,13 @@
 
 <mapper namespace="cn.itsource.org.mapper.DepartmentMapper">
     <!--查找子部门-->
-    <!--List<Department> findChildByParentId(Long id);-->
+    <!--List<Department> findChildByParentId(@Param("id") Long id,@Param("editId")Long editId );-->
     <select id="findChildByParentId" resultType="cn.itsource.org.domain.Department">
         SELECT * FROM t_department WHERE parent_id=#{id}
+        <if test="editId!=null and editId!='' ">
+            AND id!=#{editId}
+        </if>
+
     </select>
 
     <!--一二级目录的map-->
@@ -18,18 +22,22 @@
             <result property="name" column="dep2name"/>
         </collection>
     </resultMap>
+
     <!--//查找一二级目录-->
-    <!--List<Department> findOneTwolevelDepartments();-->
+    <!--List<Department> findOneTwolevelDepartments(Long id);-->
     <select id="findOneTwolevelDepartments" resultMap="OneTwolevelMap">
         SELECT dep.*,dep2.id dep2id,dep2.name dep2name FROM t_department dep
         LEFT JOIN t_department dep2 ON dep.id = dep2.parent_id
         WHERE dep.parent_id is NULL
+        <if test="id!=null">
+            AND dep.id!=#{id}
+        </if>
     </select>
     
 
     <!--//批量删除-->
-    <!--void deleteMany(List<Department> department);-->
-    <delete id="deleteMany" >
+    <!--void BatchRemove(List<T> t);-->
+    <delete id="BatchRemove" >
         DELETE FROM t_department WHERE id in
         <foreach collection="list" item="dep" open="(" separator="," close=")">
            #{dep.id}

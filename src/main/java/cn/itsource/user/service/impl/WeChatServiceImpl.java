@@ -46,7 +46,7 @@ public class WeChatServiceImpl implements IWeChatService {
      */
     @Override
     public JsonResult handleCallback(String code) {
-        //通过code获取token
+        //通过code获取微信的access_token
         String tokenUrl= WeChatConstant.TOKEN_URL.replace("APPID",WeChatConstant.APPID )
                 .replace("SECRET", WeChatConstant.SECRET)
                 .replace("CODE", code);
@@ -95,9 +95,12 @@ public class WeChatServiceImpl implements IWeChatService {
             map.put("openid", openid);
             return JsonResult.ResultObj(map);
 
-        }else { //如果有用户 就判断有没有绑定电话，然后登录
-            if(wxuser.getLoginInfo()==null){
-                System.out.println("没有绑定用户");
+        }else {
+            //获取微信用户的登录信息
+            LoginInfo loginInfo = wxuser.getLoginInfo();
+            //如果为空 就是没有绑定电话，需要跳转绑定页面
+            if(loginInfo==null){
+                //System.out.println("没有绑定用户");
                 //跳转绑定页面 向前端返回apenid
                 map.put("openid", openid);
                 return JsonResult.ResultObj(map);
@@ -105,7 +108,7 @@ public class WeChatServiceImpl implements IWeChatService {
                 //如果绑定了用户 就存储登录用户
                 String token = UUID.randomUUID().toString();
                 //存储登录信息 30分钟
-                redisTemplate.opsForValue().set("token",token,30, TimeUnit.MINUTES);
+                redisTemplate.opsForValue().set(token,loginInfo,30, TimeUnit.MINUTES);
                 //返回 token 前端存入localStorage
                 map.put("token", token);
                 return JsonResult.ResultObj(map);
@@ -130,7 +133,6 @@ public class WeChatServiceImpl implements IWeChatService {
             //没有的话，就要保存一个登录对象信息
             loginInfo = createLoginInfo(loginInfoDto);
             loginInfoMapper.add(loginInfo);
-
             //还需要保存一个user信息
             User user = createUser(loginInfo);
             userMapper.add(user);
@@ -139,9 +141,9 @@ public class WeChatServiceImpl implements IWeChatService {
         //绑定微信 然后登录 根据用户唯一标识绑定登录用户信息
         weChatMapper.binder(loginInfo.getId(),loginInfoDto.getOpenid());
 
-        //可以登录了 京用户存入redis
+        //可以登录了 将用户存入redis
         String token = UUID.randomUUID().toString();
-        redisTemplate.opsForValue().set("token",token );
+        redisTemplate.opsForValue().set(token,loginInfo );
         Map<String, Object> map = new HashMap<>();
         map.put("token", token);
         return map;
@@ -163,6 +165,10 @@ public class WeChatServiceImpl implements IWeChatService {
         loginInfo.setPhone(loginInfoDto.getPhone());
         //0 商家/平台   1 用户
         loginInfo.setType(loginInfoDto.getType());
+        //同步微信信息
+        Wxuser byOpenid = weChatMapper.findByOpenid(loginInfoDto.getOpenid());
+        //同步昵称---用户名
+        loginInfo.setUsername(byOpenid.getNickname());
         return loginInfo;
     }
 

@@ -34,6 +34,11 @@ public class BaseServiceImpl<T> implements IBaseService<T> {
     }
 
     @Override
+    public void BatchRemove(List<T> t) {
+        baseMapper.BatchRemove(t);
+    }
+
+    @Override
     public T findById(Long id) {
         return baseMapper.findById(id);
     }

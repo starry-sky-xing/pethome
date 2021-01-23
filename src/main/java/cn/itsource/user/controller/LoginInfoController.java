@@ -19,7 +19,6 @@ public class LoginInfoController {
     public JsonResult userRegister(@RequestBody LoginInfoDto loginInfoDto){
         try {
           return  iLoginInfoService.login(loginInfoDto);
-
         } catch (Exception e) {
             e.printStackTrace();
             return JsonResult.me(e.getMessage());
