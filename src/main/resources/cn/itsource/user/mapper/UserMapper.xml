@@ -3,6 +3,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.itsource.user.mapper.UserMapper">
+    <select id="findByLoginInfoId" resultType="cn.itsource.user.domain.User">
+        SELECT * FROM t_user WHERE logininfo_id=#{loginInfoId}
+    </select>
+
 
     <!--添加-->
     <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">

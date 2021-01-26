@@ -7,4 +7,6 @@ import cn.itsource.user.domain.User;
 public interface IUserService extends IBaseService<User>{
     //
     void checkPhone(String phone) throws CustomException;
+    //更具登录信息 查询用户
+    User findByLoginInfoId(Long loginInfoId);
 }

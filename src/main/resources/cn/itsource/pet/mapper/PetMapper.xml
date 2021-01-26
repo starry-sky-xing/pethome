@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.pet.mapper.PetMapper">
+
+    <!--上架-->
+    <update id="onsale">
+        UPDATE t_pet SET onsaletime=sysdate(),state=1 WHERE id IN
+        <foreach collection="list" item="p" open="(" separator="," close=")">
+            #{p.id}
+        </foreach>
+    </update>
+
+    <delete id="delete">
+      DELETE FROM t_pet WHERE id=#{id}
+    </delete>
+
+    <resultMap id="findByIdResultMap" type="cn.itsource.pet.domain.Pet">
+        <id column="id" property="id"/>
+        <result column="name" property="name"></result>
+        <result column="saleprice" property="saleprice"></result>
+        <result column="costprice" property="costprice"></result>
+        <result column="resources" property="resources"></result>
+        <result column="state" property="state"></result>
+        <result column="offsaletime" property="offsaletime"></result>
+        <result column="onsaletime" property="onsaletime"></result>
+        <result column="createtime" property="createtime"></result>
+        <result column="sourceType" property="sourceType"></result>
+        <association property="petType" javaType="cn.itsource.pet.domain.PetType">
+            <id column="tid" property="id"/>
+            <result column="tname" property="name"/>
+        </association>
+        <association property="detail" javaType="cn.itsource.pet.domain.PetDetail">
+            <id column="did" property="id"/>
+            <result column="dintro" property="intro"/>
+            <result column="dadoptNotice" property="adoptNotice"/>
+        </association>
+        <association property="user" javaType="cn.itsource.user.domain.User">
+            <id column="uid" property="id"/>
+            <result column="uusername" property="username"/>
+            <result column="uemail" property="email"/>
+            <result column="uphone" property="phone"/>
+        </association>
+        <association property="searchMasterMsg" javaType="cn.itsource.pet.domain.SearchMasterMsg">
+            <id column="smid" property="id"></id>
+        </association>
+        <association property="shop" javaType="cn.itsource.org.domain.Shop">
+            <id column="sid" property="id"/>
+            <result column="sname" property="name"/>
+        </association>
+    </resultMap>
+
+    <select id="findById" resultMap="findByIdResultMap">
+      SELECT p.*,t.id tid,t.name,d.id did,d.intro dintro,d.adoptNotice dadoptNotice,
+      u.id uid,u.username uusername,u.phone uphone,u.email uemail,sm.id smid,s.id sid,s.name sname
+      FROM t_pet p
+      LEFT JOIN t_pet_type t on p.type_id=t.id
+      LEFT JOIN t_user u ON p.user_id=u.id
+      LEFT JOIN t_pet_detail d ON p.id=d.pet_id
+      LEFT JOIN t_search_master_msg sm ON p.search_master_msg_id= sm.id
+      LEFT JOIN t_shop s ON p.shop_id=s.id
+      WHERE p.id=#{id}
+    </select>
+
+    <!--查询总共条数-->
+    <select id="count" resultType="long">
+        SELECT count(id) FROM t_pet p
+        <include refid="petFindSql" />
+    </select>
+
+    <resultMap id="petResultMap" type="cn.itsource.pet.domain.Pet">
+        <id column="id" property="id"/>
+        <result column="name" property="name"></result>
+        <result column="saleprice" property="saleprice"></result>
+        <result column="costprice" property="costprice"></result>
+        <result column="resources" property="resources"></result>
+        <result column="state" property="state"></result>
+        <result column="offsaletime" property="offsaletime"></result>
+        <result column="onsaletime" property="onsaletime"></result>
+        <result column="createtime" property="createtime"></result>
+        <result column="sourceType" property="sourceType"></result>
+        <association property="petType" javaType="cn.itsource.pet.domain.PetType">
+            <id column="tid" property="id"/>
+            <result column="tname" property="name"/>
+        </association>
+        <association property="detail" javaType="cn.itsource.pet.domain.PetDetail">
+            <id column="did" property="id"/>
+            <result column="dintro" property="intro"/>
+            <result column="dadoptNotice" property="adoptNotice"/>
+        </association>
+        <association property="user" javaType="cn.itsource.user.domain.User">
+            <id column="uid" property="id"/>
+            <result column="uusername" property="username"/>
+            <result column="uemail" property="email"/>
+            <result column="uphone" property="phone"/>
+        </association>
+    </resultMap>
+    <!--查询-->
+    <select id="findPage" resultMap="petResultMap">
+      SELECT p.*,t.id tid,t.name,d.id did,d.intro dintro,d.adoptNotice dadoptNotice,
+      u.id uid,u.username uusername,u.phone uphone,u.email uemail
+      FROM t_pet p
+      LEFT JOIN t_pet_type t on p.type_id=t.id
+      LEFT JOIN t_user u ON p.user_id=u.id
+      LEFT JOIN t_pet_detail d ON p.id=d.pet_id
+      <include refid="petFindSql" />
+      limit #{begin},#{pageSize}
+    </select>
+
+    <sql id="petFindSql" >
+        <where>
+            <if test="state!=null">
+                and p.state=#{state}
+            </if>
+            <if test="name!=null and name!=''">
+                and p.name=#{name}
+            </if>
+            <if test="shopId!=null">
+                and p.shop_id=#{shopId}
+            </if>
+        </where>
+    </sql>
+
+    <!--添加-->
+    <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_pet(name, saleprice, costprice, resources, state, type_id, offsaletime, onsaletime, createtime, sourceType,shop_id, user_id, search_master_msg_id)
+        VALUES (
+        #{name},
+        #{saleprice},
+        #{costprice},
+        #{resources},
+        #{state},
+        #{petType.id},
+        #{offsaletime},
+        #{onsaletime},
+        #{createtime},
+        #{sourceType},
+        #{shop.id},
+        #{user.id},
+        #{searchMasterMsg.id}
+        )
+    </insert>
+
+
+</mapper>

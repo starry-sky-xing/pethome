@@ -8,4 +8,10 @@ public class PetHomeConstant {
     public static final Integer ADMIN=0;
     //普通用户
     public static final Integer HOME=1;
+
+    //已处理
+    public static final Integer HANDLED = 1;
+
+    //宠物来源  寻主
+    public static final Integer SEARCH_MASTER = 1;
 }

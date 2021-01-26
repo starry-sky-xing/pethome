@@ -10,4 +10,10 @@ public interface UserMapper extends BaseMapper<User>{
      * @return
      */
     User findByPhone(String phone);
+
+    /**
+     * 查询用户
+     * @param loginInfoId
+     */
+    User findByLoginInfoId(Long loginInfoId);
 }

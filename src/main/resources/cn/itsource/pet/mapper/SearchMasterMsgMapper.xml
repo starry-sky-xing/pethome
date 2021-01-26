@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.pet.mapper.SearchMasterMsgMapper">
+
+    <delete id="delete">
+        DELETE FROM t_search_master_msg WHERE id=#{id}
+    </delete>
+
+    <update id="update" >
+        UPDATE t_search_master_msg
+        <set>
+            <if test="name!=null and name!=''">
+                `name`=#{name},
+            </if>
+            <if test="age!=null">
+                age=#{age},
+            </if>
+            <if test="gender!=null">
+                gender=#{gender},
+            </if>
+            <if test="coatColor!=null and coat_color!=''">
+                coat_color=#{coatColor},
+            </if>
+            <if test="resources!=null and resources!=''">
+                resources=#{resources},
+            </if>
+            <if test="petType!=null">
+                pet_type=#{petType.id},
+            </if>
+            <if test="price!=null">
+                price=#{price},
+            </if>
+            <if test="address!=null and address!=''">
+                address=#{address},
+            </if>
+            <if test="state!=null">
+                state=#{state},
+            </if>
+            <if test="title!=null and title!=''">
+                title=#{title},
+            </if>
+            <if test="user!=null">
+                user_id=#{user.id},
+            </if>
+            <if test="shop!=null">
+                shop_id=#{shop.id},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <select id="findById" resultType="cn.itsource.pet.domain.SearchMasterMsg">
+        SELECT * FROM t_search_master_msg WHERE id=#{id}
+    </select>
+
+    <select id="count" resultType="long">
+        SELECT count(*) FROM t_search_master_msg m
+        <include refid="whereSql"/>
+    </select>
+
+    <resultMap id="messageResultMap" type="cn.itsource.pet.domain.SearchMasterMsg">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="coat_color" property="coatColor"/>
+        <result column="resources" property="resources"/>
+        <result column="price" property="price"/>
+        <result column="address" property="address"/>
+        <result column="state" property="state"/>
+        <result column="title" property="title"/>
+        <association property="petType" javaType="cn.itsource.pet.domain.PetType">
+            <id column="tid" property="id"/>
+            <result column="tname" property="name"/>
+        </association>
+        <association property="user" javaType="cn.itsource.user.domain.User">
+            <id column="uid" property="id"/>
+            <result column="uusername" property="username"/>
+            <result column="uphone" property="phone"/>
+            <result column="uemail" property="email"/>
+        </association>
+        <association property="shop" javaType="cn.itsource.org.domain.Shop">
+            <id column="sid" property="id"/>
+            <result column="sname" property="name"/>
+        </association>
+
+    </resultMap>
+    <select id="findPage" resultMap="messageResultMap">
+        SELECT m.*,t.id tid,t.name tname,u.id uid,u.username uusername,u.phone uphone,u.email uemail,s.id sid,s.name sname
+        FROM t_search_master_msg m
+        LEFT JOIN t_pet_type t ON m.pet_type=t.id
+        LEFT JOIN t_user u  ON m.user_id=u.id
+        LEFT JOIN t_shop s ON m.shop_id=s.id
+        <include refid="whereSql"/>
+        LIMIT #{begin},#{pageSize}
+    </select>
+    <sql id="whereSql">
+        <where>
+            <if test="state!=null">
+                AND m.state=#{state}
+            </if>
+            <if test="shopId!=null">
+                AND m.shop_id=#{shopId}
+            </if>
+            <if test="title!=null and title!=''">
+                AND m.title LIKE CONCAT("%",#{title},"%")
+            </if>
+        </where>
+    </sql>
+
+    <insert id="add">
+        INSERT INTO t_search_master_msg(name, age, gender, coat_color, resources, pet_type, price, address, state, title, user_id, shop_id)
+        VALUES (
+        #{name},
+        #{age},
+        #{gender},
+        #{coatColor},
+        #{resources},
+        #{petType.id},
+        #{price},
+        #{address},
+        #{state},
+        #{title},
+        #{user.id},
+        #{shop.id}
+        )
+    </insert>
+
+</mapper>

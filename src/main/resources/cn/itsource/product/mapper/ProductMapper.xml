@@ -4,8 +4,6 @@
 
 <mapper namespace="cn.itsource.product.mapper.ProductMapper">
 
-
-
     <update id="offsale" >
         UPDATE t_product SET offsaletime=sysdate(),state=0 WHERE id IN
         <foreach collection="list" item="p" open="(" close=")" separator="," >

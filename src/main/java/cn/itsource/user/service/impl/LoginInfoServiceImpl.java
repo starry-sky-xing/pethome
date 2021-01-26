@@ -1,5 +1,6 @@
 package cn.itsource.user.service.impl;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import cn.itsource.basic.constant.PetHomeConstant;
 import cn.itsource.basic.constant.VarifyCodeConstant;
 import cn.itsource.basic.exception.CustomException;
@@ -62,6 +63,7 @@ public class LoginInfoServiceImpl extends BaseServiceImpl<LoginInfo> implements 
         CheckLoginData(loginInfoDto);
         //根据用户名/电话/邮箱 查询数据库
        LoginInfo loginInfo = loginInfoMapper.findByUsernameAndType(loginInfoDto.getUsername(),loginInfoDto.getType());
+        //System.out.println("============================"+loginInfo.getId());
        //如果查询为空 用户不存在
         if(loginInfo==null){
             throw new CustomException("用户不存在");

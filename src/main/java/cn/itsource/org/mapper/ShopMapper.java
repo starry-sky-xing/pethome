@@ -6,4 +6,10 @@ import cn.itsource.org.domain.Shop;
 
 public interface ShopMapper extends BaseMapper<Shop>{
 
+    /**
+     * 根据登录信息查询店铺
+     * @param loginInfoId
+     * @return
+     */
+    Shop findByLoginInfoId(Long loginInfoId);
 }

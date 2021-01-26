@@ -4,6 +4,16 @@
 
 <mapper namespace="cn.itsource.org.mapper.ShopMapper">
 
+    <select id="findByLoginInfoId" resultType="cn.itsource.org.domain.Shop">
+        SELECT * FROM t_shop s
+        LEFT JOIN t_employee e ON s.id=e.shop_id
+        LEFT JOIN t_logininfo l ON e.logininfo_id=l.id
+        WHERE l.id=#{loginInfoId}
+    </select>
+
+    <select id="findAll" resultType="cn.itsource.org.domain.Shop">
+        SELECT * FROM t_shop
+    </select>
     <!--添加-->
     <!--void add(T t);-->
     <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">

@@ -29,4 +29,10 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
             throw new CustomException("手机号已被注册！");
         }
     }
+
+    @Override
+    public User findByLoginInfoId(Long loginInfoId) {
+
+        return userMapper.findByLoginInfoId(loginInfoId);
+    }
 }

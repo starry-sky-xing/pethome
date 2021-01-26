@@ -52,6 +52,11 @@ public class ShopServiceImpl extends BaseServiceImpl<Shop> implements IShopServi
         shopMapper.update(shop);
     }
 
+    @Override
+    public Shop findByLoginInfoId(Long loginInfoId) {
+        return shopMapper.findByLoginInfoId(loginInfoId);
+    }
+
     private LoginInfo CreateLoginInfo(Employee admin) {
         LoginInfo loginInfo = new LoginInfo();
         BeanUtils.copyProperties(admin, loginInfo);
