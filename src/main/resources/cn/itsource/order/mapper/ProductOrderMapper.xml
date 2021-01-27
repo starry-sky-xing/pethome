@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.order.mapper.ProductOrderMapper">
+
+    <update id="update">
+      UPDATE t_order_product
+      <set>
+          <if test="digest!=null and digest!=''">
+              digest=#{digest},
+          </if>
+          <if test="state!=null">
+              state=#{state},
+          </if>
+          <if test="price!=null">
+              price=#{price},
+          </if>
+          <if test="orderSn!=null and orderSn!=''">
+              orderSn=#{orderSn},
+          </if>
+          <if test="paySn!=null and paySn!=''">
+              paySn=#{paySn},
+          </if>
+          <if test="lastPayTime!=null">
+              lastPayTime=#{lastPayTime},
+          </if>
+          <if test="lastConfirmTime!=null">
+              lastConfirmTime=#{lastConfirmTime},
+          </if>
+          <if test="user!=null and user.id!=null">
+              user_id=#{user.id},
+          </if>
+          <if test="shop.id!=null and shop.id!=null">
+              shop_id=#{shop.id},
+          </if>
+      </set>
+      where id=#{id}
+    </update>
+
+   <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+       INSERT INTO t_order_product(digest, state, price, orderSn, paySn, lastPayTime, lastConfirmTime, user_id, shop_id)
+       VALUES (
+        #{digest},
+        #{state},
+        #{price},
+        #{orderSn},
+        #{paySn},
+        #{lastPayTime},
+        #{lastConfirmTime},
+        #{user.id},
+        #{shop.id}
+       )
+   </insert>
+
+
+
+</mapper>

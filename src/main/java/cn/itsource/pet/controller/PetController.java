@@ -58,9 +58,10 @@ public class PetController {
 
     //接回宠物 准备上架 寻主
     @PutMapping("/handlePet")
-    public JsonResult handlePet(@RequestBody Pet pet){
+    public JsonResult handlePet(@RequestBody Pet pet,HttpServletRequest request){
         try {
-            petService.handlePet(pet);
+            LoginInfo loginInfo = SystemContext.getLoginInfo(request);
+            petService.handlePet(pet,loginInfo);
             return new JsonResult();
         } catch (Exception e) {
             e.printStackTrace();

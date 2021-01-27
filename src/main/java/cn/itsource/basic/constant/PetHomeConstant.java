@@ -1,5 +1,7 @@
 package cn.itsource.basic.constant;
 
+import java.math.BigDecimal;
+
 public class PetHomeConstant {
     //用户正常启用 state
     public static final Integer OK=1;
@@ -14,4 +16,7 @@ public class PetHomeConstant {
 
     //宠物来源  寻主
     public static final Integer SEARCH_MASTER = 1;
+
+    //收购订单状态已完成
+    public static final Integer PETACQUISITIONORDER_COMPLETE=3;
 }

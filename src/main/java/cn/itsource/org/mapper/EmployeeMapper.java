@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface EmployeeMapper extends BaseMapper<Employee>{
 
+    Employee findByloginInfoId(Long id);
 }

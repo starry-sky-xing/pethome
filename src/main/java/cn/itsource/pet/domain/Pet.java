@@ -45,4 +45,7 @@ public class Pet extends BaseDomain {
     //宠物详细
     private PetDetail detail = new PetDetail();
 
+    //收购订单的支付类型 应该在dto里面 为了方便就写在这里
+    private Integer paytype;
+
 }

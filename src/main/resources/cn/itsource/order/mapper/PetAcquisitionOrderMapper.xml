@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.order.mapper.PetAcquisitionOrderMapper">
+    <insert id="add" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_order_pet_acquisition(orderSn, digest, lastcomfirmtime, state, price,paytype, pet_id, user_id, shop_id, address, emp_id)
+        VALUES (
+        #{orderSn},
+        #{digest},
+        #{lastcomfirmtime},
+        #{state},
+        #{price},
+        #{paytype},
+        #{pet.id},
+        #{user.id},
+        #{shop.id},
+        #{address},
+        #{employee.id}
+        )
+    </insert>
+
+</mapper>
