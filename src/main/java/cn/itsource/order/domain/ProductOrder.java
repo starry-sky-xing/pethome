@@ -16,7 +16,7 @@ public class ProductOrder extends BaseDomain {
     private Integer state=1;
     //价格
     private BigDecimal price;
-    //支付方式
+    //支付方式  1银联   2 微信  3支付宝
     private Integer payType;
     //订单编号
     private String orderSn;

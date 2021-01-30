@@ -1,5 +1,6 @@
 package cn.itsource.order.service.impl;
 
+import cn.itsource.basic.constant.PayConstants;
 import cn.itsource.basic.service.impl.BaseServiceImpl;
 import cn.itsource.basic.utiles.CodeGenerateUtils;
 import cn.itsource.basic.utiles.DistanceUtil;
@@ -14,8 +15,10 @@ import cn.itsource.order.mapper.UserAddressMapper;
 import cn.itsource.order.service.IProductOrderService;
 import cn.itsource.org.domain.Shop;
 import cn.itsource.org.mapper.ShopMapper;
+import cn.itsource.pay.domain.PayBill;
+import cn.itsource.pay.mapper.PayBillMapper;
+import cn.itsource.pay.service.IPayBillService;
 import cn.itsource.product.domain.Product;
-import cn.itsource.product.mapper.ProductDetailMapper;
 import cn.itsource.product.mapper.ProductMapper;
 import cn.itsource.user.domain.LoginInfo;
 import cn.itsource.user.domain.User;
@@ -51,14 +54,27 @@ public class ProductOrderServiceImpl extends BaseServiceImpl<ProductOrder> imple
     @Autowired
     private ProductOrderDetailMapper productOrderDetailMapper;
 
-    /*addressId: 1,
-    //1 银联支付   2微信支付     3支付宝支付
-    payType: 3,
-    //选中的服务
-    products: [{id: 16, num: 1}, {id: 66, num: 2}]*/
+    //注入支付单mapper
+    @Autowired
+    private PayBillMapper payBillMapper;
+
+    //paybill实现
+    @Autowired
+    private IPayBillService payBillService;
+
+
+    /**
+     *
+     * @param param
+     * addressId: 1, 1 银联支付   2微信支付     3支付宝支付
+     * payType: 3, //选中的服务 支付宝
+     * products: [{id: 16, num: 1}, {id: 66, num: 2}]
+     * @param loginInfo 登录信息
+     * @return 支付宝的支付页面
+     */
     @Override
     @Transactional
-    public void submitOrder(Map<String, Object> param, LoginInfo loginInfo) {
+    public String submitOrder(Map<String, Object> param, LoginInfo loginInfo) {
         //获取用户地址id
         long addressId = Long.parseLong(param.get("addressId").toString());
         //根据地址id获取地址对象
@@ -82,6 +98,53 @@ public class ProductOrderServiceImpl extends BaseServiceImpl<ProductOrder> imple
 
         //更新服务订单
         productOrderMapper.update(productOrder);
+
+        Integer payType = (Integer) param.get("payType");
+        //创建支付信息
+        PayBill payBill = createPayBill(productOrder,payType);
+        //保存支付信息
+        payBillMapper.add(payBill);
+        switch (payType){
+            case 1:
+                //银联支付
+                break;
+            case 2:
+                //微信支付
+                break;
+            case 3:
+                //支付宝
+               return payBillService.toAlipay(productOrder);
+
+        }
+        return  null;
+
+    }
+
+    /**
+     * 创建服务订单的支付信息
+     * @return
+     */
+    private PayBill createPayBill(ProductOrder productOrder,Integer payType) {
+        PayBill payBill = new PayBill();
+        //摘要
+        payBill.setDigest(productOrder.getDigest());
+        //金额
+        payBill.setMoney(productOrder.getPrice());
+        //最后支付时间
+        payBill.setLastPayTime(productOrder.getLastPayTime());
+        //支付方式
+        payBill.setPayChannel(payType);
+        //业务类型
+        payBill.setBusinessType(PayConstants.BUSINESSTYPE_PRODUCT);
+        //业务键
+        payBill.setBusinessKey(productOrder.getId());
+        //用户
+        payBill.setUser(productOrder.getUser());
+        //商家
+        payBill.setShop(productOrder.getShop());
+        //订单编号
+        payBill.setOrderSn(productOrder.getOrderSn());
+        return payBill;
     }
 
     /**

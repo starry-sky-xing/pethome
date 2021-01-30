@@ -19,4 +19,7 @@ public class PetHomeConstant {
 
     //收购订单状态已完成
     public static final Integer PETACQUISITIONORDER_COMPLETE=3;
+
+    //支付完成
+    public static final Integer PAYMENT_COMPLETED = 2;
 }

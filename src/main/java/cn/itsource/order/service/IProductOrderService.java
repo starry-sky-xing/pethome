@@ -12,5 +12,5 @@ public interface IProductOrderService extends IBaseService<ProductOrder>{
      * @param param
      * @param loginInfo 登录信息
      */
-    void submitOrder(Map<String, Object> param, LoginInfo loginInfo);
+    String submitOrder(Map<String, Object> param, LoginInfo loginInfo);
 }

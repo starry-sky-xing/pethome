@@ -19,7 +19,10 @@ public class PetHomeWebMvcConfigurer implements WebMvcConfigurer{
                 .excludePathPatterns("/shop/settlement") //店铺入驻
                 .excludePathPatterns("/dfs/**")  //文件放行
                 .excludePathPatterns("/verifycation/**") //短信放行
+                .excludePathPatterns("/pay/notifyUrl")
+                .excludePathPatterns("/pay/returnUrl")//支付宝放行
                 .excludePathPatterns("/user/**")//user 放行
                 .excludePathPatterns("/wechat/**");//微信扫码放行
+
     }
 }

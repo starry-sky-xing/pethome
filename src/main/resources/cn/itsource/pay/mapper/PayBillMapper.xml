@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.pay.mapper.PayBillMapper">
+
+    <update id="update">
+        UPDATE t_pay_bill
+        <set>
+            <if test="digest!=null and digest!=''">
+                digest=#{digest},
+            </if>
+            <if test="money!=null">
+                money=#{money},
+            </if>
+            <if test="state!=null">
+                state=#{state},
+            </if>
+            <if test="lastPayTime!=null">
+                lastPayTime=#{lastPayTime},
+            </if>
+            <if test="payChannel!=null">
+                payChannel=#{payChannel},
+            </if>
+            <if test="updateTime!=null">
+                updateTime=#{updateTime},
+            </if>
+            <if test="unionPaySn!=null and unionPaySn!=''">
+                unionPaySn=#{unionPaySn},
+            </if>
+            <if test="businessType!=null and businessType!=''">
+                businessType=#{businessType},
+            </if>
+            <if test="businessKey!=null">
+                businessKey=#{businessKey},
+            </if>
+            <if test="user!=null and user.id!=null">
+                user_id=#{user.id},
+            </if>
+            <if test="orderSn!=null and orderSn!=''">
+                orderSn=#{orderSn},
+            </if>
+            <if test="shop!=null and shop.id!=null">
+                shop_id=#{shop.id},
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <select id="findByOrderSn" resultType="cn.itsource.pay.domain.PayBill">
+        SELECT * FROM t_pay_bill WHERE orderSn=#{orderSn}
+    </select>
+   <insert id="add" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT  INTO  t_pay_bill(digest, money, state, lastPayTime, payChannel, createTime, updateTime, unionPaySn, businessType, businessKey, user_id, shop_id,orderSn)
+        VALUES (
+          #{digest},
+          #{money},
+          #{state},
+          #{lastPayTime},
+          #{payChannel},
+          #{createTime},
+          #{updateTime},
+          #{unionPaySn},
+          #{businessType},
+          #{businessKey},
+          #{user.id},
+          #{shop.id},
+          #{orderSn}
+        )
+   </insert>
+
+
+
+</mapper>

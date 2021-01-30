@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itsource.pay.mapper.AlipayInfoMapper">
+
+    <select id="findByAppid" resultType="cn.itsource.pay.domain.AlipayInfo">
+        SELECT * FROM t_pay_alipay_info WHERE appid=#{app_id}
+    </select>
+  <select id="findByShopId" resultType="cn.itsource.pay.domain.AlipayInfo">
+      SELECT * FROM t_pay_alipay_info WHERE shop_id=#{id}
+  </select>
+
+
+
+</mapper>

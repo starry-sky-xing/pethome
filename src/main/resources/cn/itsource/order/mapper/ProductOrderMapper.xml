@@ -3,6 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.itsource.order.mapper.ProductOrderMapper">
+    <select id="findById" resultType="cn.itsource.order.domain.ProductOrder">
+        SELECT * FROM t_order_product WHERE id=#{id}
+    </select>
 
     <update id="update">
       UPDATE t_order_product
@@ -31,7 +34,7 @@
           <if test="user!=null and user.id!=null">
               user_id=#{user.id},
           </if>
-          <if test="shop.id!=null and shop.id!=null">
+          <if test="shop!=null and shop.id!=null">
               shop_id=#{shop.id},
           </if>
       </set>

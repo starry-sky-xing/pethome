@@ -24,8 +24,9 @@ public class ProductOrderController {
     public JsonResult submitOrder(@RequestBody Map<String,Object> param, HttpServletRequest request){
         try {
             LoginInfo loginInfo = SystemContext.getLoginInfo(request);
-            productOrderService.submitOrder(param,loginInfo);
-            return new JsonResult();
+            //返回的是支付宝支付页面
+            String submitOrder = productOrderService.submitOrder(param, loginInfo);
+            return JsonResult.ResultObj(submitOrder);
         } catch (Exception e) {
             e.printStackTrace();
             return JsonResult.me(e.getMessage());
