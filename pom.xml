@@ -126,6 +126,11 @@
             <version>4.10.218.ALL</version>
         </dependency>
 
+        <!--定时器quartz-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
 
 
     </dependencies>

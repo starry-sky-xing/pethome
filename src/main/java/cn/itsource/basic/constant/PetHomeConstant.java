@@ -22,4 +22,6 @@ public class PetHomeConstant {
 
     //支付完成
     public static final Integer PAYMENT_COMPLETED = 2;
+    //取消状态
+    public static final Integer CANCLE = -1;
 }

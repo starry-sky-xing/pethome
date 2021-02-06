@@ -20,6 +20,9 @@ import cn.itsource.pay.mapper.PayBillMapper;
 import cn.itsource.pay.service.IPayBillService;
 import cn.itsource.product.domain.Product;
 import cn.itsource.product.mapper.ProductMapper;
+import cn.itsource.quartz.domain.QuartzJobInfo;
+import cn.itsource.quartz.job.OrderJob;
+import cn.itsource.quartz.service.IQuartzService;
 import cn.itsource.user.domain.LoginInfo;
 import cn.itsource.user.domain.User;
 import cn.itsource.user.mapper.UserMapper;
@@ -30,10 +33,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class ProductOrderServiceImpl extends BaseServiceImpl<ProductOrder> implements IProductOrderService {
@@ -62,6 +62,8 @@ public class ProductOrderServiceImpl extends BaseServiceImpl<ProductOrder> imple
     @Autowired
     private IPayBillService payBillService;
 
+    @Autowired
+    private IQuartzService quartzService; //定时器
 
     /**
      *
@@ -104,6 +106,11 @@ public class ProductOrderServiceImpl extends BaseServiceImpl<ProductOrder> imple
         PayBill payBill = createPayBill(productOrder,payType);
         //保存支付信息
         payBillMapper.add(payBill);
+
+        //添加定时任务
+        QuartzJobInfo quartzJobInfo=createOrderTask(productOrder);
+        quartzService.addJob(quartzJobInfo);
+
         switch (payType){
             case 1:
                 //银联支付
@@ -118,6 +125,23 @@ public class ProductOrderServiceImpl extends BaseServiceImpl<ProductOrder> imple
         }
         return  null;
 
+    }
+
+    /**
+     * 创建定时器任务 15分钟取消订单
+     * @param productOrder
+     * @return
+     */
+    private QuartzJobInfo createOrderTask(ProductOrder productOrder) {
+        QuartzJobInfo quartzJobInfo = new QuartzJobInfo();
+        quartzJobInfo.setType(PayConstants.BUSINESSTYPE_PRODUCT);
+        quartzJobInfo.setJobName(PayConstants.BUSINESSTYPE_PRODUCT+productOrder.getOrderSn());
+        quartzJobInfo.setFireDate(productOrder.getLastPayTime()); //设置最后支付时间
+
+        Map<String,Object> params=new HashMap<>();
+        params.put("orderSn", productOrder.getOrderSn());
+        quartzJobInfo.setParams(params);
+        return quartzJobInfo;
     }
 
     /**

@@ -17,10 +17,10 @@ public class AlipayConfig {
 
 	// 服务器异步通知页面路径 （告诉支付宝异步请求的url地址） 注意：此url地址，必须是能被外网所访问到的
     //http://172.16.2.254/alipay/notifyUrl
-	public static String notify_url = " http://j6k9am.natappfree.cc/pay/notifyUrl";
+	public static String notify_url = " http://mps64a.natappfree.cc/pay/notifyUrl";
 
 	// 页面跳转同步通知页面路径(告诉支付宝同步请求的url地址)
-	public static String return_url = " http://j6k9am.natappfree.cc/pay/returnUrl";
+	public static String return_url = " http://mps64a.natappfree.cc/pay/returnUrl";
 
 	// 签名方式（数据传输采用非对称加密）
 	public static String sign_type = "RSA2";

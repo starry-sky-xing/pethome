@@ -12,6 +12,7 @@ import cn.itsource.pay.mapper.AlipayInfoMapper;
 import cn.itsource.pay.mapper.PayBillMapper;
 import cn.itsource.pay.service.IPayBillService;
 import cn.itsource.product.mapper.ProductMapper;
+import cn.itsource.quartz.service.IQuartzService;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
@@ -35,6 +36,9 @@ public class PayBillServiceImpl extends BaseServiceImpl<PayBill> implements IPay
 
     @Autowired
     private ProductOrderMapper productOrderMapper;
+
+    @Autowired
+    private IQuartzService quartzService;
     /**
      * 去付钱啊
      * @param productOrder
@@ -111,6 +115,9 @@ public class PayBillServiceImpl extends BaseServiceImpl<PayBill> implements IPay
                 productOrder.setLastConfirmTime(new Date());
                 productOrderMapper.update(productOrder);
 
+
+                //关闭定时器
+                quartzService.removeJob(PayConstants.BUSINESSTYPE_PRODUCT+productOrder.getOrderSn());
                 break;
             case PayConstants.BUSINESSTYPE_ADOPT:  //宠物
                 break;
